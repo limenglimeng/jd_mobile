@@ -51,13 +51,11 @@ html,body{
     position: relative;
     background-color: #fff;
     margin-top:40px;
+    margin-bottom:40px;
+    display: flex;
 }
 .jd_main .main_nav{
-    width:80px;
-    float: left;
-    position: absolute;
-    left:0;
-    top:0;
+    width: 80px;
 }
 .jd_main .main_nav .nav{
    width: 100%;
@@ -78,10 +76,10 @@ html,body{
     background-color: #fff;
 }
 .jd_main .main_detail{
-    width: 100%;
+    flex:1;
     text-align: center;
-    padding-left:90px;
     box-sizing: border-box;
+    padding-left:10px;
 }
 .jd_main .main_detail .detail_content .img_banner{
     width: 90%;
