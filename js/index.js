@@ -115,7 +115,7 @@ function timeDown(totalHour){
 }
 function timeTrans(totalSec,liArr){
     var hour=Math.floor(totalSec/3600);
-    var minute=totalSec/60%60;
+    var minute=Math.floor(totalSec%3600/60);
     var second=totalSec%60;
     liArr[0].innerHTML=hour<10?"0"+hour.toString():hour;
     liArr[2].innerHTML=minute<10?"0"+minute.toString():minute;

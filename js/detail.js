@@ -3,11 +3,10 @@ window.onload= function () {
     var bodyHeight=document.body.offsetHeight;
     var header=document.querySelector(".jd_head");
     var navMinDistance=bodyHeight-nav.offsetHeight-header.offsetHeight;
-    console.log(nav.offsetHeight);
     scrollVertical(nav,50,navMinDistance);
     fox_tap(nav,navMinDistance,0);
     var mainRight=document.querySelector(".main_detail");
-    var contentMinDistance=bodyHeight-mainRight.offsetTop-mainRight.offsetHeight;
+    var contentMinDistance=bodyHeight-header.offsetHeight-mainRight.offsetHeight;
     scrollVertical(mainRight,50,contentMinDistance);
 }
 function scrollVertical(move,delayDistance,minDistance){
@@ -51,8 +50,10 @@ function scrollVertical(move,delayDistance,minDistance){
     });
 }
 
+
 function fox_tap(move,minDistance,maxDistance){
     var liArr=move.children;
+    var detail_content=document.querySelectorAll(".detail_content");
     var liHeight=liArr[0].offsetHeight;
     var startTransition= function () {
         move.style.transition="all .5s";
@@ -62,6 +63,7 @@ function fox_tap(move,minDistance,maxDistance){
     };
     for(var i=0;i<liArr.length;i++){
         liArr[i].dataset['index']=i;
+        detail_content[i].dataset['index']=i;
     }
     var startTime=0;
     var isMove=false;
@@ -83,9 +85,11 @@ function fox_tap(move,minDistance,maxDistance){
             var a= event.target;
             for(var i=0;i<liArr.length;i++){
                 liArr[i].className="";
+                detail_content[i].className="detail_content";
             }
             a.parentNode.classList.add('current');
             var currentIndex= a.parentNode.dataset['index'];
+            detail_content[currentIndex].classList.add('current');
             var moveDistance=-liHeight*currentIndex;
             if(moveDistance>maxDistance){
                 moveDistance=maxDistance;

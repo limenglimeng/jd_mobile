@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>login</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"/>
+    <title>登录</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
 </head>
-<style>
 
-</style>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12"></div>
-    </div>
+<div class="head">
+    <a href="javascript:void(0)" class="logo fl"></a>
+    <span class="loginWel">欢迎登录</span>
+    <span class="register">没注册，去<a href="register.html" >注册</a></span>
 </div>
+<div class="info">
+    <form action="get">
+        <input type="text" name="userName" placeholder="请输入手机号码">
+        <input type="password" name="pwd" placeholder="请输入密码">
+        <input type="submit" name="login" value="立即登录">
+    </form>
+</div>
+<div class="back"><a href="index.html">返回首页</a></div>
 </body>
 </html>

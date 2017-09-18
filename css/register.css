@@ -26,6 +26,9 @@
     font-size: 14px;
 
 }
+.head .login a{
+    color:red;
+}
 .info{
     width: 80%;
     height:100%;
@@ -50,4 +53,9 @@
 .info input:last-child{
     background-color: red;
     color: white;
+}
+.back{
+    position: absolute;
+    bottom: 10px;
+    right:10px;
 }

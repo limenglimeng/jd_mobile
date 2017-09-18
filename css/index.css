@@ -191,7 +191,6 @@
 
 .jd_main .main_content:nth-child(n+2){
     margin-top:5px;
-    height:300px;
     overflow: hidden;
 }
 .jd_main .main_content:nth-child(n+2) .head{
